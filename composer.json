@@ -1,0 +1,46 @@
+{
+    "name": "krok/laravel-glide",
+    "description": "league/glide wrapper for Laravel",
+    "keywords": [
+        "laravel",
+        "glide"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander",
+            "email": "system.bin@yandex.ru",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "krok/laravel-pint": "^1.0",
+        "laravel/framework": "^11.0",
+        "league/glide": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Krok\\Glide\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Krok\\Glide\\GlideServiceProvider"
+            ],
+            "aliases": {
+                "Glide": "Krok\\Glide\\Glide"
+            }
+        }
+    },
+    "scripts": {
+        "pint": "pint --config=vendor/krok/laravel-pint/src/pint.json",
+        "cs": [
+            "@pint"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
